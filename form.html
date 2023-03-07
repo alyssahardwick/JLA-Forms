@@ -7,13 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+    <!--Only inputs with name value will be sent when form is submitted-->
     <h1>Test Form</h1>
-    <form>
+    <form action="process-form.php" method="POST">
         <label for="name">Name</label>
-        <input type="text" id="name">
+        <input type="text" id="name" name="name">
         <label for="message">Message</label>
-        <textarea id="message"></textarea>
-        <select id="priority">
+        <textarea id="message" name="message"></textarea>
+        <select id="priority" name="priority">
             <option value="1">Low</option>
             <option value="2">Medium</option>
             <option value="3">High</option>
@@ -31,7 +32,7 @@
             </label>
         </fieldset>
         <label>
-            <input type="checkbox">
+            <input type="checkbox" name="terms">
                 I agree
         </label>
         <br>
